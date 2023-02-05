@@ -19,15 +19,15 @@ function TextForm(props) {
             setText(document.getElementById("upper").value);
           }} value={text} id="upper" rows="8"></textarea>
         </div>
-        <button type="button" className="btn btn-primary btn-sm mx-2" onClick={() => {
+        <button type="button" className="btn btn-primary btn-sm mx-2 my-1" onClick={() => {
           props.data('Text changed to UpperCase')
           setText(text.toUpperCase());
         }}>UpperCase</button>
-        <button type="button" className="btn btn-primary btn-sm mx-2" onClick={() => {
+        <button type="button" className="btn btn-primary btn-sm mx-2 my-1" onClick={() => {
           props.data('Text Changed To LowerCase')
           setText(text.toLowerCase());
         }}>LowerCase</button>
-        <button type="button" className="btn btn-primary btn-sm mx-2" onClick={copyToClip}>Copy To Clipboard</button>
+        <button type="button" className="btn btn-primary btn-sm mx-2 my-1" onClick={copyToClip}>Copy To Clipboard</button>
         <div className='my-1'>
           <h3>Details</h3>
           <p>{text.length} characters and {(text.split(/\s+/)[text.split(/\s+/).length-1]==="")?text.split(/\s+/).length-1:text.split(/\s+/).length} words</p>
